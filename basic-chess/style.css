@@ -22,18 +22,21 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    position: relative;
-    /* For absolute positioning of nav */
+    padding: 20px;
+    /* Add padding for small screens */
+    /* position: relative; Removed as nav is no longer absolute */
 }
 
 /* Branding Nav Styles (Tailwind Emulation) */
 .project-nav-container {
-    position: absolute;
-    top: 20px;
-    left: 20px;
+    /* position: absolute; removed */
+    margin-bottom: 20px;
+    /* Add space between nav and game */
     z-index: 1000;
 }
 
@@ -81,6 +84,11 @@ body {
 
 .nav-logo.h-6 {
     height: 1.5rem;
+}
+
+.nav-logo.h-10 {
+    height: 2.5rem;
+    /* Larger size for Polihasnur */
 }
 
 .nav-separator {
